@@ -1,0 +1,54 @@
+﻿@model DemoFormValidations.Models.Student;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container-fluid">
+        
+            <div class="col-sm-1">
+                @using (Html.BeginForm(FormMethod.Post))
+                {
+                <div>
+                    @Html.DisplayName("Rno")
+                    @Html.Editor("Rno","Rno",new{@class="form-control"})
+                    @Html.ValidationMessage("Rno",new{style="color:red;"})
+                </div><br />
+
+                <div>
+                    @Html.DisplayName("Name")
+                    @Html.Editor("Name", "Name", new { @class = "form-control" })
+                @Html.ValidationMessage("Name", new { style = "color:red;" })
+                </div><br />
+
+                <div>
+                    @Html.DisplayName("DOB")
+                    @Html.Editor("DOB", "DOB", new { @class = "form-control" })
+                @Html.ValidationMessage("DOB", new { style = "color:red;" })
+                </div><br />    
+
+                <div>
+                    @Html.DisplayName("Email")
+                    @Html.Editor("Email", "Email", new { @class = "form-control" })
+                @Html.ValidationMessage("Email", new { style = "color:red;" })
+                </div><br />    
+
+                <div>
+                    @Html.DisplayName("Mno")
+                    @Html.Editor("Mno", "Mno", new { @class = "form-control" })
+                @Html.ValidationMessage("Mno", new { style = "color:red;" })
+                </div><br />    
+
+                <div>
+                    @Html.DisplayName("Percenatge")
+                    @Html.Editor("Percentage", "Percentage", new { @class = "form-control" })
+                @Html.ValidationMessage("Percentage", new { style = "color:red;" })
+                </div><br />    
+
+                <div>
+                    <input type="submit" value="Submit" class="btn btn-outline-success" />
+                </div><br />
+              }
+            </div>
+        
+</div>
